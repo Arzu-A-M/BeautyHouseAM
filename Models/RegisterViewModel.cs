@@ -1,5 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using static BeautyHouseAM.Data.Constants.GlobalConstants.ApplicationUser;
+﻿using BeautyHouseAM.Data.Entities.Enums;
+using System.ComponentModel.DataAnnotations;
+using static BeautyHouseAM.Data.Constants.GlobalConstants.Rgister;
 
 namespace BeautyHouseAM.Models
 {
@@ -7,22 +8,27 @@ namespace BeautyHouseAM.Models
     {
         [Required]
         [StringLength(50)]
+        [Display(Name ="First name")]
         public string FirstName { get; set; } = null!;
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Last name")]
         public string LastName { get; set; } = null!;
 
         [Required]
         [StringLength(50)]
-        public DateTime Birthday { get; set; }
+        public DateTime Birthday { get; set; } 
+        
+        [Required]
+        public Gender Gender { get; set; }
 
         [Required]
         [StringLength(UserNameMaxLength, MinimumLength = UserNameMinLength)]
         public string UserName { get; set; } = null!;
 
         [Required]
-        [StringLength(EmailMaxLength, MinimumLength = EmailMinLength)]
+        [StringLength(EmailMaxLength)]
         [EmailAddress]
         public string Email { get; set; } = null!;
 

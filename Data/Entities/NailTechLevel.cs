@@ -7,13 +7,13 @@ namespace BeautyHouseAM.Data.Entities
     {
         [Key]
         [Required]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Required]
         public Level Level { get; set; }
         
         [Required]
-        public List<NailTechnicon> NailTechnicons { get; set; }
+        public List<NailTechnician> NailTechnicons { get; set; }
 
 
     }

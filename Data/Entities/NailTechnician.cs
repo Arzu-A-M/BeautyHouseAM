@@ -2,14 +2,15 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using static BeautyHouseAM.Data.Constants.GlobalConstants.NailTechnicon;
 using BeautyHouseAM.Data.Entities.Enums;
+using BeautyHouseAM.MappingTable;
 
 namespace BeautyHouseAM.Data.Entities
 {
-    public class NailTechnicon
+    public class NailTechnician
     {
         [Key]
         [Required]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Required]
         [StringLength(FirstNameMaxLength)]
@@ -22,46 +23,21 @@ namespace BeautyHouseAM.Data.Entities
         public string LastName { get; set; } = null!;
 
         [Required]
-        public DateTime BirthDate { get; set; }
-
-        [Required]
-        public Gender Gender { get; set; }
-
-        [Required]
-        public string Email { get; set; } = null!;
-
-        [Required]
         public string PhoneNumber { get; set; } = null!;
         
         [Required]
         [StringLength(DescriptionMaxLength)]
         public string Description { get; set; } = null!;
 
-
         [Required]
-        [Column(TypeName = "decimal(4,2)")]
-        public decimal Rating { get; set; }
-
-        [Required]
-        public string ImageUrl { get; set; } = null!;
-
-        [Required]
-        public int NailTechLevelId { get; set; }
+        public Guid NailTechLevelId { get; set; }
        
         [Required]
         public NailTechLevel NailTechLevel { get; set; } = null!;
 
         [Required]
-        public List<Manicure> Manicures { get; set; }
+        public List<NailTechnicianImage> NailTechnicianImages { get; set; } = null!;
         
-        [Required]
-        public List<Pedicure> Pedicures { get; set; }
-
-
-
-
-
-
 
     }
 

@@ -11,8 +11,13 @@ namespace BeautyHouseAM.Data.Entities
         public string Name { get; set; } = null!;
 
         [Required]
+        public string Description { get; set; } = null!;
+
+        [Required]
         [Column(TypeName = "decimal(4,2)")]
         public decimal Price { get; set; }
+
+        public List<Manicure> Manicures { get; set; }=null!;
 
     }
 }

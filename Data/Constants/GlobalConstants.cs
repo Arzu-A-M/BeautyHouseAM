@@ -4,14 +4,9 @@
     {
         public class ApplicationUser
         {
-            public const int UserNameMaxLength = 20;
-            public const int UserNameMinLength = 5;
-
-            public const int EmailMaxLength = 60;
-            public const int EmailMinLength = 10;
-
-            public const int PasswordMaxLength = 20;
-            public const int PasswordMinLength = 5;
+            public const int FirstNameMaxLength = 20;
+            public const int LastNameMaxLength = 20;
+            
         }
 
         public class NailTechnicon
@@ -25,14 +20,16 @@
             public const int DescriptionMaxLength = 5000;
             public const int DescriptionMinLength = 5;
 
-            public const string RatingMaxLength = "10";
-            public const string RatingMinLength = "0";
         }
 
-        public class Category
+        public class Rgister
         {
-            public const int NameMaxLength = 50;
-            public const int NameMinLength = 5;
+            public const int UserNameMaxLength = 50;
+            public const int UserNameMinLength = 5;
+            public const int EmailMaxLength = 50;
+            public const int EmailMinLength = 10;
+            public const int PasswordMinLength = 8;
+            public const int PasswordMaxLength = 20;
         }
     }
 }
